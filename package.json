@@ -1,0 +1,29 @@
+{
+  "name": "minigrate",
+  "version": "1.0.0",
+  "description": "Abstract migration library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap '**/_tests/*.js' --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juice49/minigrate.git"
+  },
+  "keywords": [
+    "migrate"
+  ],
+  "author": "Ash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juice49/minigrate/issues"
+  },
+  "homepage": "https://github.com/juice49/minigrate#readme",
+  "dependencies": {
+    "sort-by": "^1.2.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "tap": "^11.0.1"
+  }
+}

@@ -41,12 +41,7 @@ function * getTargetMigrations (direction, currentMigration, migrations) {
 
 function getTargetMigration (direction, currentMigration, migrations) {
   const sortedMigrations = sortMigrations(migrations)
-
-  // TODO: Unit test me.
-  const currentMigrationIndex = typeof currentMigration === 'undefined'
-    ? -1
-    : getMigrationByName(currentMigration, sortedMigrations)
-
+  const currentMigrationIndex = getMigrationByName(currentMigration, sortedMigrations)
   return sortedMigrations[currentMigrationIndex + direction] || null
 }
 
@@ -55,12 +50,8 @@ function sortMigrations (migrations) {
 }
 
 function getMigrationByName (name, migrations) {
-  const index = migrations.findIndex(migration =>
+  return migrations.findIndex(migration =>
     migration.name === name)
-
-  return index === -1
-    ? null
-    : index
 }
 
 module.exports = {

@@ -121,7 +121,7 @@ tap.test('getMigrationByName', test => {
   test.test('if there is no match', test => {
     const name = 'the-world-is-quiet-here'
     const index = getMigrationByName(name, migrations)
-    test.equal(index, null, 'it should return null')
+    test.equal(index, -1, 'it should return -1')
     test.end()
   })
 
